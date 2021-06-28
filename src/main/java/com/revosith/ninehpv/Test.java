@@ -1,0 +1,30 @@
+package com.revosith.ninehpv;
+
+import com.alibaba.fastjson.JSON;
+import com.revosith.ninehpv.dto.CookieParam;
+
+/**
+ * @author: hehaiyong@51talk.com
+ * @data: 2021/6/16
+ * @Description:
+ **/
+public class Test {
+    public static void main(String[] args) {
+
+
+        String  test ="Host: miaomiao.scmttec.com\n" +
+                "Connection: keep-alive\n" +
+                "Accept: application/json, text/plain, */*\n" +
+                "Cookie: _xxhm_=%7B%22birthday%22%3A689702400000%2C%22birthdayStr%22%3A%221991-11-10%22%2C%22hasPassword%22%3Afalse%2C%22headerImg%22%3A%22http%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2FVicSudC46JRE4NzLMxVT10RFfKWAXcdruTgCJ6l74yISOvT0gQRzCk1k5R6OmvAusiaQ4qRFtmLnT10ERqfjn4AsmaKKnjSD6L%2F132%22%2C%22id%22%3A7933319%2C%22mobile%22%3A%22156****0495%22%2C%22name%22%3A%22%E4%BD%95**%22%2C%22nickName%22%3A%22%E5%B7%A6%E8%BD%AE%22%2C%22regionCode%22%3A%22510124%22%2C%22sex%22%3A1%2C%22uFrom%22%3A%22cdbdbsy%22%2C%22wxSubscribed%22%3A1%7D; _xxhmen_=0694E0683801AE9459D2A7AFBA163EB4801FD4DBEF5194370F9B10EF3794579127311C5D768C08C356597C87FA34461FE352901F2066F7F6F9673C8FC50F03687B4E69425D67005FA84E2777340E41CFFA1933CEC9A49B1A9ADBB792B446B6F9F99DF67C4064C49EE043AAB96FC94090B8A8F9B7DA13405194D73AEA173733F6291C04449CB2D839F34B7C87FD85EDB50118EE43452C7D55F84D6D8E3EFDD606079A1473E55F65BDB0193392B2756179C4E5CBEA99FDF86E6ED99939DD774758CA1CC4D41CDB252C1EE1D3E1D760E574ECAE4CA6CA023F3FE27993384D563DA0241D4950BF06E6B5235ABCC2BF39D1F031EA26657568FE9F03A360EC68814145EB1D883D76CC731F19C3FC61E758C0FB3D50806B60F38ED46435B0CCFC58E14C724AF64A6A5AA3E85B776614EC6C137730A1CF3E0485172E1D74B4EFD787789960F836B89E877E75142BF0B58DDC0268D514B10A7D1413C2C9FA31BF8D408B438EC818DADDA52E6012AE6B5541A1EED2442CC1FA60957B4FE8C2CF376ACF99F9BA032983BA5C62A83513E069FF72B612861705FEAD086C2F5646381A9A315935220236EBB534CDFDA76B5E87ABF7BD28C7222D3BFF41A015E8503CB30878EF11; _xzkj_=wxapptoken:10:dda1ee1f6d48464bdc0d9abd8f4b4090_6447e11c8c60da2a4c9941c7dcef63b1\n" +
+                "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 MicroMessenger/7.0.9.501 NetType/WIFI MiniProgramEnv/Windows WindowsWechat\n" +
+                "X-Requested-With: XMLHttpRequest\n" +
+                "content-type: application/json\n" +
+                "tk: wxapptoken:10:dda1ee1f6d48464bdc0d9abd8f4b4090_6447e11c8c60da2a4c9941c7dcef63b1\n" +
+                "Referer: https://servicewechat.com/wxff8cad2e9bf18719/19/page-frame.html\n" +
+                "Accept-Encoding: gzip, deflate, br";
+        CookieParam cookie = new CookieParam();
+        cookie.setCookies(test);
+        cookie.setName("王茹");
+        System.out.println(JSON.toJSONString(cookie));
+    }
+}
